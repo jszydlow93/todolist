@@ -1,0 +1,141 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Header styling */
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Task Input Form */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+/* Task Input Field */
+form input {
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    transition: border 0.2s ease;
+}
+
+form input:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+/* Task List styling - fixed height */
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px; /* Set a fixed height */
+    overflow-y: auto;  /* Make it scrollable if there are many tasks */
+}
+
+/* Individual Task Styling */
+.list-group-item {
+    border: none;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* space between tasks */
+}
+
+.list-group-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: #e9ecef;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    transition: all 0.3s ease;
+    padding: 0.75rem 2rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-danger {
+    border-color: #e63946;
+    color: #e63946;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-outline-danger:hover {
+    background: #e63946;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Placeholder text styling */
+form input::placeholder {
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+/* Empty task list message */
+.text-muted {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Responsiveness */
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.8rem;
+    }
+}
